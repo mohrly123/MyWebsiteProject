@@ -1,5 +1,5 @@
 // Zurück zu der Startseite
 document.getElementById("closeBtn").addEventListener("click", () => {
-    window.location.href = "../index.html";
+    window.location.href = "/index.html"; // Absolute URL
     console.log("Zur Startseite");
 });
