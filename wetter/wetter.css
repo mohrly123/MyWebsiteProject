@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../fonts/YuseiMagic-Regular.ttf') format('truetype');
+}
+
 body {
     background: linear-gradient(135deg, #51b9f5, #8554d4, #0edb6e);
     height: 100vh;
@@ -28,4 +33,17 @@ body {
 }
 .material-symbols-outlined:active{
     color: whitesmoke;
+}
+
+.header{
+    margin-top: 10%;
+    font-family: "CustomFont";
+    font-size: 22px;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    height: 15%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
