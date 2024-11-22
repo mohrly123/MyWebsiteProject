@@ -77,7 +77,15 @@ body {
   color: #f2ff05;
   font-weight: 600;
   margin-bottom: 3%;
+
+  display: none;
 }
+
+#auswahlStuetzpunkt{
+    
+    display: none;
+}
+
 hr {
   margin-top: 5%;
   width: 80%;
