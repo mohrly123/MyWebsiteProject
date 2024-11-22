@@ -47,7 +47,7 @@ body {
 }
 
 .btn {
-    width: 65%;
+    width: 75%;
     height: 10%;
     border: 3px solid rgba(0, 0, 0, 0.705);
     border-radius: 15px;
@@ -59,4 +59,9 @@ body {
     border: 6px solid rgba(42, 37, 37, 0.112);
     box-shadow: 5px 6px rgba(41, 40, 40, 0.071);
     
+}
+
+#select{
+    text-align: center;
+    font-size: .9em;
 }
