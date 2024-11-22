@@ -24,14 +24,20 @@ document.getElementById("auswahlAsc").addEventListener("change", (event) => {
     if (auswahl === "Spittal" || auswahl === "Villach" || auswahl === "Klagenfurt") {
         document.getElementById("labelStuetzpunkt").style.display = "inline-block";
         document.getElementById("auswahlStuetzpunkt").style.display = "inline-block";
+        document.getElementById("auswahlStuetzpunkt").className = "auswahlAsc";
         
         // Add options to the Stützpunkt select element
         let stuetzpunktSelect = document.getElementById("auswahlStuetzpunkt");
         stuetzpunktSelect.innerHTML = ""; // Clear previous options
+        // Ins Objekt Stuetzpunkte gehen / Da die auswahl (Spittal/Villach/Klagenfurt nehmen)
+        // und in der variable stuetzpunkt jeden durchlauf speichern
         stuetzpunkte[auswahl].forEach(stuetzpunkt => {
+            // erstellen bei jedem Durchlauf einer neuen option Klasse
+            console.log(`Im Array: ${stuetzpunkt}`);
             let option = document.createElement("option");
             option.value = stuetzpunkt;
             option.text = stuetzpunkt;
+            option.className = "option"; // Apply the same class as the existing options
             stuetzpunktSelect.appendChild(option);
         });
     } else if (auswahl === "") {
