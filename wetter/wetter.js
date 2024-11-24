@@ -124,7 +124,34 @@ document.getElementById("auswahlStuetzpunkt").addEventListener("change", (event)
             auswahlBahnhof.style.display = "none";
             auswahlBahnhof.innerHTML = "";
         }
+
+        document.getElementById("auswahlBahnhof").addEventListener("change", (event) => {
+            const ort = event.target.value;
+            console.log(`In ${ort} hat es: `);
+            wetterAbfrage(ort);
+            
+        })
+
     } catch (error) {
         console.error("Error in Bahnhof selection: " + error);
     }
+    ;
 });
+
+// Funktion für die Wetter Abfrage
+
+async function wetterAbfrage(city) {
+    const apiKey = "1f592401aa37ce4cc56020dc435299ad";
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&lang=de&appid=${apiKey}`;
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error("Fehler bei der Abfrage" + response.statusText);
+        }
+        const data = await response.json();
+        let temp = data.main.temp;
+        console.log(`${temp}Grad Celsius`);
+    } catch (error) {
+        console.log("Error" + error);
+    }
+}
