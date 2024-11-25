@@ -74,5 +74,16 @@ body{
     margin-top: 5%;
     width: 50%;
     height: 10%;
+    font-size: 1.3em;
+    font-weight: bold;
+    background-color: transparent;
+    border: 3px solid rgb(38, 121, 162);
+    border-radius: 10px;
+    color: whitesmoke;
+}
+.btn:active{
+    border: 3px solid hsl(200, 62%, 49%);
+    transition: 0.15s ease;
+    border-radius: 10px ;
 }
 
