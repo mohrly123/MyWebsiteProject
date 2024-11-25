@@ -1,0 +1,78 @@
+body{
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.closebtn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+#closeBtn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+.material-symbols-outlined {
+    font-size: 2.5em;
+}
+.material-symbols-outlined:active {
+    color: whitesmoke;
+}
+
+.hauptcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#myh3{
+    margin-bottom: 10%;
+    margin-top: 15%;
+    color: #854f4f;
+}
+
+/* From Uiverse.io by Yaseen549 */ 
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20%;
+    width: 85%;
+    height: 60%;
+    border-radius: 30px;
+    background: #854f4f;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+                -15px -15px 30px rgb(60, 60, 60);
+   }
+
+   .input{
+    width: 65%;
+    height: 8%;
+    text-align: center;
+    margin: 3%;
+    border: 2px solid rgb(38, 121, 162);
+    border-radius: 10px;
+    background-color: #854f4f;
+    color: white;
+    font-size: 1em;
+   }
+
+.input::placeholder {
+    color: lightgray;
+    font-size: 0.8em;
+}
+
+#inputSoll{
+    margin-top: 10%;
+}
+
+.btn{
+    margin-top: 5%;
+    width: 50%;
+    height: 10%;
+}
+
