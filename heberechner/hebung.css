@@ -1,26 +1,22 @@
-
 body{
     margin: 0;
     height: 100vh;
     width: 100vw;
 }
 
-
-
-
 .closebtn {
     position: absolute;
     top: 10px;
     left: 10px;
-  }
-  
-  #closeBtn {
+}
+#closeBtn {
     background-color: transparent;
     border: none;
-  }
-  .material-symbols-outlined {
+    padding: 0;
+}
+.material-symbols-outlined {
     font-size: 2.5em;
-  }
-  .material-symbols-outlined:active {
+}
+.material-symbols-outlined:active {
     color: whitesmoke;
-  }
+}
