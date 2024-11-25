@@ -57,6 +57,9 @@ document.getElementById("auswahlAsc").addEventListener("change", (event) => {
     }
 });
 
+let city = "Vienna";
+let temp;
+
 // Funktion für die Bahnhöfe
 document.getElementById("auswahlStuetzpunkt").addEventListener("change", (event) => {
     let auswahl = event.target.value;
@@ -118,20 +121,16 @@ document.getElementById("auswahlStuetzpunkt").addEventListener("change", (event)
                 newItem.textContent = bahnho;
                 newItem.className = "option";
                 auswahlBahnhof.appendChild(newItem);
+
+            
+            
             });
         } else if (auswahl === "") {
             labelBahnhof.style.display = "none";
             auswahlBahnhof.style.display = "none";
             auswahlBahnhof.innerHTML = "";
         }
-
-        document.getElementById("auswahlBahnhof").addEventListener("change", (event) => {
-            const ort = event.target.value;
-            console.log(`In ${ort} hat es: `);
-            wetterAbfrage(ort);
-            
-        })
-
+        
     } catch (error) {
         console.error("Error in Bahnhof selection: " + error);
     }
@@ -149,7 +148,7 @@ async function wetterAbfrage(city) {
             throw new Error("Fehler bei der Abfrage" + response.statusText);
         }
         const data = await response.json();
-        let temp = data.main.temp;
+        temp = data.main.temp;
         console.log(`${temp}Grad Celsius`);
     } catch (error) {
         console.log("Error" + error);
